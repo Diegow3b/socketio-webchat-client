@@ -1,3 +1,45 @@
 .home-page {
-  
+
+}
+
+ion-card{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 70%;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.myself{
+    background-color: #e6ffd1;
+    float: right;
+}
+
+.input_sender{
+    width: 80%;
+    height: 50px;
+    position:fixed;
+    //background-color:red;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:5px;
+    margin-left: 5px;
+    border-radius: 15px;
+    border: 1px solid #387ef5;
+    padding: 0px 0px 0px 12px;
+}
+
+.img_sender{
+    background-color: transparent;
+    height: 60px;
+    width: 45px;
+    position:fixed;
+    bottom:0px;
+    right: 6%;
+    margin-bottom:0px;
+}
+
+.icon_submit{
+    font-size: 50px !important;
+    margin-bottom: 0px;
 }

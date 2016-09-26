@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      {{user}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,17 +10,22 @@
   <!--<ion-list>
     <ion-item *ngFor="let message of chats">{{message}}</ion-item>
   </ion-list>-->
-  <ion-card *ngFor="let message of chats">
+   <ion-card *ngFor="let chat of chats" [ngClass]="{'myself': chat.id == id}">
 
     <ion-card-header>
-      {{user}}
+      {{chat.user}}
     </ion-card-header>
 
     <ion-card-content>
-      {{message}}
+      {{chat.message}}
     </ion-card-content>
 
   </ion-card>
-  <ion-input type="text" [(ngModel)]="chat_input" placeholder="Enter a message..."></ion-input>
-  <button fab (click)="send(chat_input)">Send</button>
+  <ion-input type="text"
+          (keyup.enter)="send(chat_input)"
+          [(ngModel)]="chat_input"
+          placeholder="Enter a message..."
+          class="input_sender">
+  </ion-input>
+  <button (click)="send(chat_input)" class="img_sender"><ion-icon primary class="icon_submit" name="navigate"></ion-icon></button>
 </ion-content>
